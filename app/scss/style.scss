@@ -399,3 +399,124 @@
    }
 }
 // end tutorial
+.footer{
+   color: #b7c3c8;
+   background-color: $bg;
+   padding: 116px 0px 90px;
+}
+.footer__inner{
+   display: flex;
+   justify-content: space-between;
+   
+}
+.footer__item-title{
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 50px;
+  position: relative;
+  &::after{
+     position: absolute;
+     content:'';
+     display: block;
+     width: 50px;
+     height: 3px;
+     background-color: $green;
+     bottom: -25px;
+  }
+}
+.item-about{
+   max-width: 285px;
+   width: 100%;
+   &__text{
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 24px;
+   margin-bottom: 35px;
+   }
+   &__map,
+   &__phone{
+      position: relative;
+      padding-left: 28px;
+      color: #fff;
+      &::before{
+         position: absolute;
+         top: 0;
+         left: 0;
+         color: $green;
+         font-size: 18px;
+         font-family: 'icomoon';
+      }
+   }
+   &__map::before{
+      content: "\f041";
+   }
+   &__phone::before{
+      content: "\f095";
+   }
+}
+.item-community,
+.item-help{
+   & li{
+      padding-left: 20px;
+      position: relative;
+      &::before{
+         font-family: 'icomoon';
+         position: absolute;
+         content: "\f105";
+         font-size: 18px;
+         left: 0;
+         top: 0;
+         color: $green;
+      }
+      & + li{
+         margin-top: 15px;
+      }
+   }
+   a{
+      color: #b7c3c8;
+   }
+}
+.footer__social{
+   margin-top: 66px;
+   margin-bottom: 35px;
+   img{
+      margin-right: 5px;
+   }
+}
+.footer__form-title{
+   font-size: 20px;
+   line-height: 36px;
+   font-weight: 400;
+   color: #fff;
+}
+.footer__form{
+   width: 260px;
+   height: 40px;
+   position: relative;
+   input{
+      width: 100%;
+      height: 100%;
+      border: none;
+   }
+   button{
+      border: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: $green;
+      
+   }
+   
+}
+.icon-location-arrow::before {
+    content: "\f124";
+    color: #fff;
+    font-size: 18px;
+   //  left: 0;
+   //  right: 0;
+    text-align: center;
+}
