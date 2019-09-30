@@ -72,9 +72,7 @@
    &.active{
       display: block;
    }
-   & + .header__circle{
-      margin-left: 15px;
-   }
+   
    span{
       position: absolute;
       width: 18px;
@@ -154,7 +152,8 @@
       display: block;
    }
 }
-.user__box{
+.user__box,
+.basket__box{
    position: relative;
    margin-top: 40px;
    height: 90px;
@@ -182,6 +181,83 @@
       font-size: 12px;
       color: #546e7a;
       margin-bottom: 15px;
+   }
+}
+.basket__menu{
+   position: absolute;
+   top: 62px;
+   right: 0;
+   border-top: 1px solid #e0e0e0;
+   height: 0;
+   overflow: hidden;
+   transition: all .3s;
+}
+.basket__box{
+   margin-top: 54px;
+   margin-left: 15px;
+   &:hover{
+      .basket__menu{
+         overflow: auto;
+         height: 100%;
+      }
+   }
+   
+}
+.basket__item{
+   background-color: #fff;
+   border: 1px solid #e0e0e0;
+   border-top: none;
+   padding: 24px;
+   display: flex;
+   align-items: center;
+   width: 269px;
+
+}
+.backet__images{
+   margin-right: 15px;
+}
+.backet__info-name{
+   @include f500;
+   color: $bg;
+
+}
+.backet__info-thema{
+   font-size: 12px;
+   color: $green;
+}
+.backet__info-price{
+   @include f500;
+   color: #000;
+   font-size: 16px;
+}
+.basket__summ{
+   padding: 16px 17px 12px;
+   border: 1px solid #e0e0e0;
+   border-top: none;
+   background-color: #fff;
+}
+.basket__title{
+   display: flex;
+   justify-content: space-between;
+   padding-left: 13px;
+   padding-right: 22px;
+   @include f700;
+   margin-bottom: 15px;
+   font-size: 16px;
+   color: $bg;
+}
+.backet__btn{
+   color: #fff;
+   @include f700;
+   font-size: 14px;
+   padding: 12px 5px;
+   background-color: $green;
+   text-align: center;
+   width: 100px;
+   &-checkout{
+      width: 123px;
+      margin-left: 6px;
+      background-color: $red;
    }
 }
 // end header
